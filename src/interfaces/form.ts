@@ -1,0 +1,16 @@
+//1. Definir con type los tipos de prioridad 
+export type Priority= 'Alta' | 'Media' | 'Baja'
+
+//2. Definir la estructura del formulario
+export interface TodoForm {
+    titulo:string
+    prioridad:Priority
+}
+
+//3. Definir la estructura
+ export interface Todo{
+    
+    titulo: string
+    prioridad:Priority
+    completada:boolean
+}
