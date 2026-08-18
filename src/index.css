@@ -1,13 +1,129 @@
-/* Estilos para el index.html*/
+/* =========================
+   ESTILOS GENERALES
+   ========================= */
 
-/*Reseteo se estilos*/
-/* Selector universal*/
-*{
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-body{
+body {
   font-family: Arial, Helvetica, sans-serif;
+  background-color: #EAF4FF;
+  color: #263238;
+  padding: 20px;
+}
+
+/* =========================
+   TÍTULOS
+   ========================= */
+
+h1,
+h2 {
+  text-align: center;
+  color: #0B3D91;
+  margin-bottom: 20px;
+}
+
+/* =========================
+   FORMULARIO
+   ========================= */
+
+form {
+  max-width: 450px;
+  margin: 30px auto;
+  padding: 30px;
+  background-color: white;
+  border-radius: 15px;
+  box-shadow: 0 5px 15px rgba(11, 61, 145, 0.15);
+}
+
+/* Etiquetas */
+
+label {
+  display: block;
+  margin-bottom: 8px;
+  color: #0B3D91;
+  font-weight: bold;
+}
+
+/* Campos */
+
+input,
+select {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 15px;
+  border: 2px solid #B8D4F0;
+  border-radius: 8px;
+  background-color: #F8FCFF;
+  font-size: 15px;
+}
+
+/* Efecto al seleccionar */
+
+input:focus,
+select:focus {
+  outline: none;
+  border-color: #1976D2;
+  box-shadow: 0 0 0 3px rgba(25, 118, 210, 0.15);
+}
+
+/* =========================
+   BOTÓN
+   ========================= */
+
+button {
+  width: 100%;
+  padding: 12px;
+  background-color: #1976D2;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #0B3D91;
+}
+
+/* =========================
+   TABLA
+   ========================= */
+
+table {
+  width: 90%;
+  margin: 30px auto;
+  border-collapse: collapse;
+  background-color: white;
+  box-shadow: 0 5px 15px rgba(11, 61, 145, 0.15);
+}
+
+/* Encabezados */
+
+th {
+  padding: 12px;
+  background-color: #0B3D91;
+  color: white;
+}
+
+/* Celdas */
+
+td {
+  padding: 10px;
+  text-align: center;
+  border: 1px solid #B8D4F0;
+}
+
+/* Filas */
+
+tr:nth-child(even) {
+  background-color: #EAF4FF;
+}
+
+tr:hover {
+  background-color: #D6EBFF;
 }
