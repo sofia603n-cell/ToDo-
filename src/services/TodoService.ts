@@ -1,7 +1,7 @@
 // Los servicios controlan operaciones de logica de negocios(Crud)
 // Se hace una funcion por cada operacion(de la letra de la CRUD)
 
-import axios from "axios"
+import axios, { Axios } from "axios"
 import type { Todo } from "../interfaces/form"
 
 //1. Consultar los todos
@@ -41,6 +41,20 @@ export const crearTodoFetch =async(t: Todo) => {
     const datos = await response.json()
     return datos
 }
+
+
+export const crearTodoAxios =async(t: Todo) => {
+    try {
+        const response = await axios.post ("http://localhost:3006/todos", t);
+    
+        return response.data;}
+        
+        catch (error) {
+            console.error ("error al crear ToDO:", error);
+            throw error;
+        }
+    }
+    
 
 // //crear un objeto tarea
 // const nuevoTodo: Todo={

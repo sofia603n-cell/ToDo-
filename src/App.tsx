@@ -6,12 +6,12 @@ import type { Priority, Todo } from './interfaces/form'
 import FormTodo from './components/FormTodo'
 
 import './index.css';
-import { crearTodoFetch } from './services/TodoService';
+import { consultarTodosAxios, crearTodoAxios, crearTodoFetch } from './services/TodoService';
 //importamos subcomponentes 
 
 
 
-const App = async () => {
+const App =  () => {
     const [listaTodo, setListaTodo] =
                     useState<Todo[]>([])
 
@@ -20,7 +20,17 @@ const App = async () => {
 //useEffect: hook es un metodo para controlar para controlar el ciclo de vida del componente
 //cuando se carga el componente (App) por primera vez 
 
-useEffect(()=>{},[])
+useEffect(()=>{
+  const consultar = async() => {
+    //llame al servicio para traer datos
+    const datos = await consultarTodosAxios ()
+
+    //  ocargar el estado con los datos traidos
+    setListaTodo(datos)
+
+  }
+  consultar()
+},[])
   
 
 
@@ -44,7 +54,11 @@ useEffect(()=>{},[])
       //poner la nueva tarea
       //en la lista
   // guardar el nuevo todo en la api
-    const nuevaData = await crearTodoFetch(Tarea)       
+
+
+
+    // const nuevaData = await crearTodoFetch(Tarea)       
+    const nuevaData = await crearTodoAxios(Tarea) 
     setListaTodo((prev)=>[...prev , nuevaData])
   }
 
