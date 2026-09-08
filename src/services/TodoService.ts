@@ -14,7 +14,7 @@ export const consultarTodosFetch =async() => {
     //fetch
     const Response=await fetch("http://localhost:3006/todos" )
     const datos = await Response.json()
-    console.log(datos)
+    return datos
 }
 
 //1.1 consultar los todos con axios
@@ -24,13 +24,13 @@ export const consultarTodosAxios =async() => {
     //fetch
     const Response=await axios.get("http://localhost:3006/todos" )
     const datos = await Response.data
-    console.log(datos)
+    return datos
 }
 
 
 //2. Crear un todo fetch
 
-const crearTodoFetch =async(t: Todo) => {
+export const crearTodoFetch =async(t: Todo) => {
     const response = await fetch("http://localhost:3006/todos",{
         method: "POST",
         headers: {
@@ -39,14 +39,14 @@ const crearTodoFetch =async(t: Todo) => {
         body: JSON.stringify(t)
     })
     const datos = await response.json()
-    console.log(datos)
+    return datos
 }
 
-//crear un objeto tarea
-const nuevoTodo: Todo={
-    titulo:"E 200",
-    prioridad:"Alta",
-    completada:false,
-    id: "100"
-}
-crearTodoFetch(nuevoTodo)
+// //crear un objeto tarea
+// const nuevoTodo: Todo={
+//     titulo:"E 200",
+//     prioridad:"Alta",
+//     completada:false,
+//     id: "100"
+// }
+// crearTodoFetch(nuevoTodo)
