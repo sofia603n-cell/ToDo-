@@ -1,7 +1,7 @@
-import { useState} from 'react'
+import { useState } from 'react'
 import ListTodo from './components/ListTodo'
 
-import type { TodoForm, Todo } from './interfaces/form'
+import type { Priority, Todo } from './interfaces/form'
 
 import FormTodo from './components/FormTodo'
 

@@ -1,5 +1,4 @@
-import React from 'react'
-import  type {Todo} from '../interfaces/form'
+import type { Todo } from '../interfaces/form'
 import ItemTodo from './ItemTodo'
 
 

@@ -1,7 +1,4 @@
-import React from 'react'
 import type { Todo } from '../interfaces/form'
-import { FcHighPriority } from "react-icons/fc"; 
-
 
 interface ItemTodoProps {
 
@@ -16,10 +13,9 @@ function ItemTodo({ t }:ItemTodoProps) {
                   <td>{ t.titulo}</td>
                   <td >{ t.prioridad }</td>
                   {/*Operador ternario:  ?:*/}
-                  <td>{ (t.completada)===true? 
-                              <span >Si</span> :
-                              <span >No<FcHighPriority /></span>
-                                          
+                  <td>{ t.completada === true ? 
+                              <span>Si</span> :
+                              <span>No</span>
                       }</td>
                 </tr>
     )
